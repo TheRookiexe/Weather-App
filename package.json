@@ -1,0 +1,41 @@
+{
+  "name": "webpack-template",
+  "version": "1.0.0",
+  "description": "A minimal Webpack 5 template for JavaScript projects.",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "webpack serve --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
+    "deploy": "npm run build && git add dist -f && git commit -m 'Deploy build' && git subtree push --prefix dist origin gh-pages",
+    "lint": "eslint src --ext .js,.mjs",
+    "lint:fix": "eslint src --ext .js,.mjs --fix",
+    "format": "prettier --write .",
+    "check-format": "prettier --check ."
+  },
+  "keywords": [
+    "webpack",
+    "template",
+    "frontend",
+    "starter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/css": "^0.14.1",
+    "@eslint/js": "^9.39.1",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.5.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.4",
+    "prettier": "^3.6.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+dist/
+build/
+node_modules/
+package-lock.json
+yarn.lock
+.env
+.git
+.gitignore
+coverage/
+*.log
+webpack*.js
+eslint.config.mjs
