@@ -28,6 +28,10 @@ class Dom{
 
         const searchBar = document.createElement('input');
         searchBar.id = "search-bar";
+        searchBar.type = 'text';
+        searchBar.name = "locationName";
+        searchBar.setAttribute('required', "");
+        searchBar.setAttribute('autofocus', "");
         searchBar.placeholder = "Enter a Locations Name...."
         
         const searchBtn = document.createElement('button');
