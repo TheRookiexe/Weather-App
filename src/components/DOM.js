@@ -1,5 +1,9 @@
 import logo from '../assets/cloudy.png';
 import srhIcon from '../assets/search.png'
+import { fetchData } from './fetch';
+
+const API = "YUHMJ8NXB8R8ULNQN9XXET95Y";
+
 class Dom{
     constructor() {
         this.container = document.querySelector('.container');
@@ -23,15 +27,15 @@ class Dom{
     }
 
     search() {
-        const searchDiv = document.createElement('search');
+        const searchDiv = document.createElement('div');
         searchDiv.id = "search-div"
 
         const searchBar = document.createElement('input');
         searchBar.id = "search-bar";
         searchBar.type = 'text';
         searchBar.name = "locationName";
-        searchBar.setAttribute('required', "");
-        searchBar.setAttribute('autofocus', "");
+        searchBar.required = true;
+        searchBar.autofocus= true;
         searchBar.placeholder = "Enter a Locations Name...."
         
         const searchBtn = document.createElement('button');
@@ -40,6 +44,17 @@ class Dom{
         const btnIcon = document.createElement('img');
         btnIcon.id = "btn-icon";
         btnIcon.src = srhIcon;
+
+        let cityName = "";
+
+        searchBtn.addEventListener('click', ()=> {
+            cityName = searchBar.value.trim();
+            if (!cityName) return alert('Enter a valid city name!')
+            if (cityName) {
+                fetchData(API, cityName);
+            }
+                
+        });
 
         searchBtn.appendChild(btnIcon);
         searchDiv.appendChild(searchBar);
