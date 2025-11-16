@@ -12,16 +12,20 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
 }
 
 #header-div {
   background-color: #1f2020;
-  color: whitesmoke;
+  color: white;
   padding: 10px;
   height: 80px;
+  width: 99%;
   font-size: 50px;
   font-weight: bold;
   display: flex;
@@ -36,4 +40,45 @@ body {
   margin-left: 15px;
   overflow: hidden;
   border: none;
+}
+
+#search-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#search-bar {
+  width: 700px;
+  height: 20px;
+  padding: 10px;
+  padding-left: 35px;
+  font-size: 25px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 4px 4px 6px black;
+}
+
+#search-btn {
+  height: 40px; 
+  width: 40px;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px black;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+#search-btn:active {
+  box-shadow: 0 0 15px #000000;
+  transform: scale(0.88);
+}
+
+
+#btn-icon {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
 }
