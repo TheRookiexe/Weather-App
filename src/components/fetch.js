@@ -2,6 +2,7 @@ class weatherFetch {
 
     constructor() {
         this.container = document.querySelector('.container');
+        this.createSpinner();
     }
 
     showError(message) { 
@@ -19,6 +20,7 @@ class weatherFetch {
     }
 
     async fetchData(API,city) {
+        this.showspinner();
         try {
             const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=${API}`);
             if(!response.ok){
@@ -36,9 +38,24 @@ class weatherFetch {
         }
         catch(err) {
             return {error: err.message};
+        } finally {
+            this.hidespinner();
         }
     }   
 
+    createSpinner() {
+        const spinner = document.createElement('div');
+        spinner.classList.add('spinner');
+        document.body.appendChild(spinner);
+    }
+    
+    showspinner() {
+        document.querySelector('.spinner').style.display = 'flex';
+    }
+
+    hidespinner() {
+        document.querySelector('.spinner').style.display = 'none';
+    }
 }
 
 export {weatherFetch};
