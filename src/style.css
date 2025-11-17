@@ -83,3 +83,15 @@ body {
   height: 40px;
   overflow: hidden;
 }
+
+.error-Box {
+  display:none;
+  background:#eeeeee;
+  color:#ff0000;
+  font-weight: bold;
+  padding:10px;
+  border-radius:6px;
+  margin-top:10px;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
