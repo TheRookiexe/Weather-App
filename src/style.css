@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  height: 90vh;
+  height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -127,4 +127,14 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.render-div {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  width: 100%;
+}
+
+weather-card {
+  background-color: #1f2020;
 }

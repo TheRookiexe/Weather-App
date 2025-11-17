@@ -1,8 +1,5 @@
 import logo from '../assets/cloudy.png';
 import srhIcon from '../assets/search.png'
-import { weatherFetch } from './fetch';
-
-const API = "YUHMJ8NXB8R8ULNQN9XXET95Y";
 
 class Dom{
     constructor() {
@@ -45,22 +42,15 @@ class Dom{
         btnIcon.id = "btn-icon";
         btnIcon.src = srhIcon;
 
-        let cityName = "";
-        const fetData = new weatherFetch();
-        searchBtn.addEventListener('click', async()=> {
-            cityName = searchBar.value.trim();
-            if (!cityName) return alert('Enter a valid city name!')
-            const data = await fetData.fetchData(API, cityName);
-            if (data.error){
-                fetData.showError(data.error);
-            }   
-        });
-
         searchBtn.appendChild(btnIcon);
         searchDiv.appendChild(searchBar);
         searchDiv.appendChild(searchBtn);
         this.container.appendChild(searchDiv);
+    
+        return {searchBar, searchBtn};
     }
+
+
 }
 
 export {Dom};
