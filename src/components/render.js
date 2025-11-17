@@ -8,11 +8,10 @@ class Renderer {
     }
     
     renderWeather(data) {
-        const weatherCard = document.createElement('div');
-        weatherCard.classList.add('weather-card');
-        weatherCard.textContent = "test text";
-
-        this.renderDiv.appendChild(weatherCard);
+        const currWeatherCard = document.createElement('div');
+        currWeatherCard.classList.add('curr-weather-card');
+        currWeatherCard.textContent = `${data.resolvedAddress}<br> Current Temp: ${Math.round((data.currentConditions.temp-32)*5/9)} °C`;
+        this.renderDiv.appendChild(currWeatherCard);
     }
 }
 
