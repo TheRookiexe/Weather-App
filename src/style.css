@@ -3,12 +3,13 @@
   padding: 0px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  background: linear-gradient(115deg, #15436c, #283e51); 
+  background: linear-gradient(115deg, #15436c, #283e51);
 }
 
 .container {
@@ -31,7 +32,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  gap: 30px
+  gap: 30px;
 }
 
 #logo-div {
@@ -62,21 +63,22 @@ body {
 }
 
 #search-btn {
-  height: 40px; 
+  height: 40px;
   width: 40px;
   background: transparent;
   border-radius: 50%;
   border: none;
   cursor: pointer;
   box-shadow: 2px 2px 4px black;
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
 }
 
 #search-btn:active {
   box-shadow: 0 0 15px #000000;
   transform: scale(0.88);
 }
-
 
 #btn-icon {
   width: 40px;
@@ -85,38 +87,38 @@ body {
 }
 
 .error-Box {
-  display:none;
-  background:#eeeeee;
-  color:#ff0000;
+  display: none;
+  background: #eeeeee;
+  color: #ff0000;
   font-weight: bold;
-  padding:10px;
-  border-radius:6px;
-  margin-top:10px;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
   transition: opacity 0.5s ease;
   opacity: 1;
 }
 
 .spinner {
-  position: fixed;             
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;                
-  height: 100vh;               
-  display: flex;      
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5); 
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
-  z-index: 9999;               
-  display: none;               
+  z-index: 9999;
+  display: none;
 }
 
 .spinner::after {
-  content: "";
+  content: '';
   width: 60px;
   height: 60px;
 
-  border: 6px solid rgba(255,255,255,0.3);
+  border: 6px solid rgba(255, 255, 255, 0.3);
   border-top-color: #00aaff;
   border-radius: 50%;
 
@@ -158,13 +160,22 @@ body {
   margin-left: 30%;
 }
 
-.weather-info, .weather-info-1, .weather-info-2, .weather-info-3, .weather-info-4, .weather-info-5 {
+.weather-info,
+.weather-info-1,
+.weather-info-2,
+.weather-info-3,
+.weather-info-4,
+.weather-info-5 {
   font-weight: bold;
   font-size: 20px;
   line-height: 1;
 }
 
-.forecaste-1, .forecaste-2, .forecaste-3, .forecaste-4, .forecaste-5 {
+.forecaste-1,
+.forecaste-2,
+.forecaste-3,
+.forecaste-4,
+.forecaste-5 {
   background-color: #1f2020;
   border-radius: 15px;
   box-shadow: 4px 4px 6px black;
